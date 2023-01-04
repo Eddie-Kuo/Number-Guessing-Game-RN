@@ -1,8 +1,9 @@
 // screen to show the beginning of the game - user picks the number between 1-99 for the phone to guess
 // import React from "react";
 import { TextInput, View, StyleSheet, Alert } from 'react-native';
-import PrimaryButton from '../components/PrimaryButton';
+import PrimaryButton from '../components/ui/PrimaryButton';
 import { useState } from 'react';
+import Colors from '../utils/colors';
 
 function StartGameScreen({ onPickedNumber }) {
   const [enteredNumber, setEnteredNumber] = useState('');
@@ -66,7 +67,7 @@ const styles = StyleSheet.create({
     marginTop: 100,
     marginHorizontal: 24,
     borderRadius: 8,
-    backgroundColor: '#4e0329',
+    backgroundColor: Colors.primary800,
     // how to create box shadow on ios devices
     shadowColor: 'black',
     shadowOffset: {
@@ -81,9 +82,9 @@ const styles = StyleSheet.create({
     width: 50,
     textAlign: 'center',
     fontSize: 32,
-    borderBottomColor: '#ddb52f',
+    borderBottomColor: Colors.accent500,
     borderBottomWidth: 2,
-    color: '#ddb52f',
+    color: Colors.accent500,
     marginVertical: 8,
     fontWeight: 'bold',
   },

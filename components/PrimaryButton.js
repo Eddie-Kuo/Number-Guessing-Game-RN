@@ -1,17 +1,13 @@
-import React from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable, StyleSheet } from 'react-native';
 
-function PrimaryButton({ children }) {
-  function pressHandler() {
-    console.log("button is pressed");
-  }
+function PrimaryButton({ children, onPress }) {
   return (
     // when building custom buttons managing multiple button containers allows for more customization and button pressing feedback without it looking weird or affecting other components since styles are not cascading - they're all separate
 
     // pressed property - boolean true if button is being pressed
     <View style={styles.buttonOutterContainer}>
       <Pressable
-        onPress={pressHandler}
+        onPress={onPress}
         style={({ pressed }) =>
           pressed
             ? [styles.buttonInnerContainer, styles.pressed]
@@ -30,16 +26,16 @@ const styles = StyleSheet.create({
   buttonOutterContainer: {
     borderRadius: 28,
     margin: 4,
-    overflow: "hidden",
+    overflow: 'hidden',
   },
   buttonInnerContainer: {
-    backgroundColor: "#72063c",
+    backgroundColor: '#72063c',
     paddingVertical: 8,
     paddingHorizontal: 16,
   },
   buttonText: {
-    color: "white",
-    textAlign: "center",
+    color: 'white',
+    textAlign: 'center',
   },
   pressed: {
     opacity: 0.75,

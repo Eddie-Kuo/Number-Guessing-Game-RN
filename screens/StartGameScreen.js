@@ -1,16 +1,18 @@
 // screen to show the beginning of the game - user picks the number between 1-99 for the phone to guess
-import React from 'react';
-import {TextInput, View, StyleSheet} from 'react-native';
+// import React from "react";
+import { TextInput, View, StyleSheet } from 'react-native';
 import PrimaryButton from '../components/PrimaryButton';
+import { useState } from 'react';
 
 function StartGameScreen() {
+  const [enteredNumber, setEnteredNumber] = useState('');
   return (
     <View style={styles.inputContainer}>
       <TextInput
         style={styles.numberInput}
         maxLength={2}
-        keyboardType="number-pad"
-        autoCapitalize="none"
+        keyboardType='number-pad'
+        autoCapitalize='none'
         autoCorrect={false}
       />
       <View style={styles.buttonsContainer}>

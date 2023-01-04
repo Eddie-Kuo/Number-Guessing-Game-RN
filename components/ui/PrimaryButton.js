@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   buttonText: {
-    color: 'white',
+    color: 'black',
     textAlign: 'center',
   },
   pressed: {
